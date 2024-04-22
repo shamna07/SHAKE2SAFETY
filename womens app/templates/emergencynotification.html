@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ {%include 'admin_header.html'%}
+ <center>
+    <div id="side-nav" class="table-background">
+        <h3 class="font-weight-bolder mb-0">notifications</h3>
+        <br>
+       
+        <table border="1" class="table" style="width: 1200px;">
+
+            <tr style="background-color: rgb(238, 14, 189);">
+                <th>SL.NO</th>
+                <th>Name</th>
+                <th>date</th>
+                <th>status</th>
+                <th>Location</th>
+                <th>Image</th>
+            </tr>
+            {% for i in data['emergenecy_notification']%}
+
+            <tr style="background-color: rgba(224, 59, 174, 0.597);">
+                <td>{{loop.index}}</td>
+                <td>{{i['fname']}} {{i['lname']}}</td>
+                <td>{{i['date']}}</td>
+                <td>{{i['status']}}</td>
+                <td><a class="btn btn-outline-danger" href="http://www.google.com/maps?q={{i['wlatitude'] }},{{ i['wlongitude'] }}">Location </a></td>
+                <td><a href="viewemergencyimages?id={{i['emergency_id']}}" class="btn btn-primary">Image</a></td>
+
+            </tr>
+            {%endfor%}
+        </table>
+           </div>
+ </center>
+    
+    
+
+
+</body>
+</html>

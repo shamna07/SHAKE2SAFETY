@@ -1,0 +1,80 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+
+        <tr>
+            <th>user_id</th>
+            <th>title</th>
+            <th>description</th>
+            <th>reply</th>
+            <th>date</th>
+        </tr>
+        {% for i in data['complaints']%}
+        <tr>
+            <td>{{i['user_id']}}</td>
+            <td>{{i['title']}}</td>
+            <td>{{i['description']}}</td>
+            <td><a href="/admin_reply?id={{i['complaint_id']}}">reply</a></td>
+            <td>{{i['date']}}</td>
+
+
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html> -->
+
+<!--  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ {%include 'admin_header.html'%}
+ <center>
+    <div id="side-nav" class="table-background">
+        <h3 class="font-weight-bolder mb-0">complaints</h3>
+        <br>
+       
+        <table border="1" class="table" style="width: 1200px;">
+
+            <tr style="background-color: rgb(238, 14, 189);">
+                <th>user_id</th>
+                <th>title</th>
+                <th>description</th>
+                <th>reply</th>
+                <th>date</th>
+            </tr>
+            {% for i in data['complaints']%}
+            <tr style="background-color: rgba(224, 59, 174, 0.597);">
+
+                <td>{{i['user_id']}}</td>
+                <td>{{i['title']}}</td>
+                <td>{{i['description']}}</td>
+                <td><a href="/admin_reply?id={{i['complaint_id']}}">reply</a></td>
+                <td>{{i['date']}}</td>
+
+    
+            </tr>
+            {%endfor%}
+        </table>
+           </div>
+ </center>
+    
+    
+
+
+</body>
+</html>

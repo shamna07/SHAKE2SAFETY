@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ {%include 'admin_header.html'%}
+ <center>
+    <div id="side-nav" class="table-background">
+        <h3 class="font-weight-bolder mb-0">View User</h3>
+        <br>
+       
+           <table border ="1" align="center" class="table" style="width: 1200px;">
+       
+               <tr style="background-color: rgb(238, 14, 189);">
+                   <th>fname</th>
+                   <th>lname</th>
+                   <th>phone</th>
+                   <th>email</th>
+               </tr>
+               {% for i in data['user']%}
+               <tr style="background-color: rgba(224, 59, 174, 0.597);">
+                   <td>{{i['fname']}}</td>
+                   <td>{{i['lname']}}</td>
+                   <td>{{i['phone']}}</td>
+                   <td>{{i['email']}}</td>
+       
+       
+               </tr>
+               {%endfor%}
+           </table>
+           </div>
+ </center>
+    
+    
+
+
+</body>
+</html>

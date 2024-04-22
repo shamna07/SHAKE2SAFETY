@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ {%include 'admin_header.html'%}
+ <center>
+    <div id="side-nav" class="table-background">
+        <h3 class="font-weight-bolder mb-0">notifications</h3>
+        <br>
+       
+        <table border="1" class="table" style="width: 1200px;">
+
+            <tr style="background-color: rgb(238, 14, 189);">
+                <th>SL.NO</th>
+            
+                <th>image</th>
+             
+            </tr>
+            {% for i in data['emergenecy_notification']%}
+
+            <tr style="background-color: rgba(224, 59, 174, 0.597);">
+                <td>{{loop.index}}</td>
+               
+            
+                <td><img src="{{i['image_path']}}" alt="image" height="200px" width="200px"></td>
+
+
+            </tr>
+            {%endfor%}
+        </table>
+           </div>
+ </center>
+    
+    
+
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+
+ {%include 'admin_header.html'%}
+ <center>
+    <div id="side-nav" class="table-background">
+    <br><br><br><br>
+
+        <h3 class="font-weight-bolder mb-0">helplinenumber</h3>
+        <br>
+       
+        <form method="post" class="">
+            <table>
+                <tr>
+                    <th>name</th>
+                    <td><input type="text" name="name" class="form-control"></td>
+                    
+                </tr>
+                <tr>
+                    <th>contact number</th>
+                    <td><input type="text" name="contactnumber"   class="form-control" ></td>
+                </tr>
+                
+                <tr>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"> <input type="submit" name="submit" value="submit" class="btn btn-primary"></td>
+                </tr>
+            </table>
+        </form>
+
+        <table border="1">
+
+            <tr>
+                <th>name</th>
+                <th>contactnumber</th>
+                
+            </tr>
+            {% for i in data['view']%}
+            <tr>
+                <td>{{i['name']}}</td>
+                <td>{{i['contact_number']}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+        <div>
+         
+           </div>
+           </div>
+   
+ </center>
+    
+    
+
+
+</body>
+</html>

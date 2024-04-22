@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+
+        <tr>
+            <th>si no</th>
+            <th>title</th>
+            <th>description</th>
+            <th>date</th>
+            
+        </tr>
+        {% for i in data['normal_notification']%}
+        <tr>
+            <td>{{loop.index}}</td>
+            <td>{{i['title']}}</td>
+            <td>{{i['description']}}</td>
+            <td>{{i['date']}}</td>
+            
+
+
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
